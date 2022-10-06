@@ -1,0 +1,29 @@
+body {
+	margin: 0;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+header {
+	height: 50px;
+	background-color: fuchsia;
+}
+
+footer {
+	height: 50px;
+	background-color: fuchsia;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	
+}
+nav {
+	background-color: lightblue;
+}
+
+aside {
+	background-color: lightblue;
+}

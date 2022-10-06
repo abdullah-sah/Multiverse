@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+	background-color: black;
+	font-size: 2vw;
+}
+
+main {
+	display: grid;
+	width: 100vw;
+	height: 53vw;
+	grid-template-columns: 10% 40% 40% 10%;
+	grid-template-rows: 20% 20% 50% 10%;
+} 
+
+main img {
+	width: 100vw;
+	height: 53vw;
+}
+
+#crash {
+	width: 50%;
+	height: 30%;
+	margin: auto;
+	margin-left: 18vw;
+}
+
+#ride {
+	width: 50%;
+	height: 30%;
+	margin: auto 14vw;
+}
+
+#hi-hat {
+	grid-column: 3;
+	grid-row: 2;
+	width: 30%;
+	height: 30%;
+	margin: 0px 0px 4vw 27vw;
+}
+
+#floor-tom {
+	grid-column: 2;
+	grid-row: 3;
+	width: 20vw;
+	height: 10vw;
+	margin-left: 10vw;
+}
+
+#mid-tom {
+	grid-column: 2;
+	grid-row: 2;
+	width: 10vw;
+	margin-left: 30vw;
+	margin-top: 4vw;
+	margin-bottom: 2vw;
+}
+
+#high-tom {
+	grid-column: 3;
+	grid-row: 2;
+	width: 10vw;
+	height: 5vw;
+	margin: auto 4vw;
+}
+
+#bass-drum {
+	grid-column: 2;
+	grid-row: 3;
+	width: 20vw;
+	height: 20vw;
+	margin-top: 5vw;
+	margin-left: 33vw;
+}
+
+#snare {
+	grid-column: 3;
+	grid-row: 2;
+	width: 10vw;
+	height: 5vw;
+	margin-left: 14vw;
+	margin-top: 10vw;
+}
