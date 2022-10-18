@@ -1,0 +1,15 @@
+{
+  "name": "classes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tuktuk.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.2.0"
+  }
+}
