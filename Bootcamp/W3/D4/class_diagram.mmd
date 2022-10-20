@@ -1,0 +1,63 @@
+classDiagram
+	%% the '$' symbol represents a static property/method
+	class Car {
+		+array listOfComponents$
+		+string colour
+		+string bodyType
+		+string fuelType
+		+number numberOfDoors
+		+object dimensions
+		-string VIN
+		
+		+unlock()
+		+lock()
+		+drive(destination)
+		+stop()
+	}
+
+	class SteeringWheel {
+		+string material
+		+string shape
+		+number diameter
+		+rotate(angle)
+	}
+
+	class WindshieldWiper {
+		+number count$
+		+string material
+	}
+
+	class Horn {
+		+Audio sound
+	}
+
+	class Tyre {
+		+number count$
+		+string material
+		+string dimensionsCode
+	}
+
+	class Engine {
+		+float engineSize
+		+number cylinders
+	}
+
+	class Door {
+		+number count$
+	}
+
+	class Drivetrain {
+		+array listOfComponents$
+	}
+	
+
+	Car *.. SteeringWheel : composition
+	Car *.. Tyre : composition
+	Car *.. Engine : composition
+	Car *.. WindshieldWiper : composition
+	Car *.. Door : composition
+	Car *.. Drivetrain : composition
+	Drivetrain "1" o-- "1" Engine : aggregation
+	Drivetrain "1" o-- "4" Tyre : aggregation
+
+	SteeringWheel "1" *.. "1" Horn

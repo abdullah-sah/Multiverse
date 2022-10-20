@@ -1,0 +1,8 @@
+sequenceDiagram
+	activate Engine
+	Engine ->> Drivetrain: Supply power
+	deactivate Engine
+	activate Drivetrain
+	Drivetrain ->> Tyre : Convert power to movement
+	deactivate Drivetrain
+	Tyre ->> Car : Moves car
