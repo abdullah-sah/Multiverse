@@ -1,5 +1,13 @@
 classDiagram
 	%% the '$' symbol represents a static property/method
+
+	class Driver {
+		-string name
+		-bool isInCar
+		-startCar()
+		-stopCar()
+	}
+
 	class Car {
 		+array listOfComponents$
 		+string colour
@@ -38,26 +46,24 @@ classDiagram
 	}
 
 	class Engine {
-		+float engineSize
-		+number cylinders
+		-float engineSize
+		-number cylinders
+		-bool engineOn
+		-toggleEngine()
 	}
 
 	class Door {
 		+number count$
 	}
-
-	class Drivetrain {
-		+array listOfComponents$
-	}
 	
 
+
+
+	Driver "1" o.. "many" Car : aggregation
 	Car *.. SteeringWheel : composition
 	Car *.. Tyre : composition
 	Car *.. Engine : composition
 	Car *.. WindshieldWiper : composition
 	Car *.. Door : composition
-	Car *.. Drivetrain : composition
-	Drivetrain "1" o-- "1" Engine : aggregation
-	Drivetrain "1" o-- "4" Tyre : aggregation
 
 	SteeringWheel "1" *.. "1" Horn
