@@ -17,9 +17,12 @@ const main = async () => {
 	// 	field: "History",
 	// });
 
-	// a1.update({
-	// 	name: "Tom Holland",
-	// });
+	const a1 = await Author.findOne({
+		where: { name: "Rom Holland" },
+	});
+	a1.update({
+		name: "Tom Holland",
+	});
 	const books = await Book.findAll({
 		attributes: ["title", ["author_id", "Author ID"]],
 	});
@@ -33,6 +36,8 @@ const main = async () => {
 			},
 		},
 	});
+
+	console.table(books.map((book) => book.toJSON()));
 };
 
 main();

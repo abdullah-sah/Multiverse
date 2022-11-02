@@ -57,16 +57,6 @@ const seed = async () => {
 		},
 	]);
 
-	await Author.bulkCreate(
-		[
-			{
-				name: "steve",
-				field: "Philosopher of Science",
-			},
-		],
-		{ validate: true }
-	);
-
 	await Book.bulkCreate([
 		{
 			title: "Leibniz: An Intellectual Biography",
